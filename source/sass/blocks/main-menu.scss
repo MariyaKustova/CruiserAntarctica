@@ -1,0 +1,36 @@
+.main-menu {
+  display: flex;
+  margin-left: auto;
+}
+
+.main-menu__button-open {
+  display: none;
+}
+
+.main-menu__wrapper {
+  display: none;
+}
+
+.main-menu__list {
+  @include list-reset();
+  display: flex;
+  padding-top: 48px;
+}
+
+.main-menu__list-item:not(:last-child) {
+  margin-right: 33px ;
+}
+
+.main-menu__link {
+  @include font (16px, 20px);
+  @include font-medium;
+  @include link-reset ($light);
+
+  &:hover {
+    color: $light-hover;
+  }
+
+  &:focus {
+    color: $light-active;
+  }
+}

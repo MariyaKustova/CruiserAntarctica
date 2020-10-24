@@ -1,0 +1,30 @@
+body {
+  font-family: "Monserrat", "Arial", sans-serif;
+  color: $dark;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  cursor: pointer;
+}
+
+a:active,
+a:focus {
+  outline: 2px solid #81b3d2;
+}
+
+input {
+  cursor: pointer;
+}
+
+input:active,
+textarea:active,
+input:focus,
+textarea:focus {
+  outline: 2px solid #81b3d2;
+}

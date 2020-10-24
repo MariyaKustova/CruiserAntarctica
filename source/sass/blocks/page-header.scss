@@ -1,0 +1,45 @@
+.page-header {
+  background-image: url("../img/Background\ 1.png");
+  background-position: center top;
+  background-size: cover;
+  min-height: 650px;
+}
+
+.page-header__wrapper-alignment {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding-left: 103px;
+  padding-right: 103px;
+  display: flex;
+}
+
+.page-header__link-logo {
+  display: block;
+  @include size(70px, 38px);
+}
+
+.page-header__heading {
+  @include main-heading ();
+}
+
+.page-header__subheading {
+  @include font(20px, 25px);
+  @include font-regular ();
+  color: $light;
+  margin-top: 0;
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .page-header {
+    min-height: 638px;
+  }
+
+  .page-header__wrapper-alignment {
+    max-width: auto;
+    min-width: 768px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+
+}
