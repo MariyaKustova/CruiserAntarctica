@@ -1,0 +1,57 @@
+@mixin font ($size, $line-height) {
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin list-reset () {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin link-reset ($color) {
+  text-decoration: none;
+  color: $color;
+}
+
+@mixin size ($widht, $height) {
+  width: $widht;
+  height: $height;
+}
+
+@mixin font-regular () {
+  font-family: "Monserrat-Regular", "Arial", sans-serif;
+}
+
+@mixin font-medium () {
+  font-family: "Monserrat-Medium", "Arial", sans-serif;
+}
+
+@mixin font-bold () {
+  font-family: "Monserrat-Bold", "Arial", sans-serif;
+}
+
+@mixin font-extra-bold () {
+  font-family: "Monserrat-Extra-Bold", "Arial", sans-serif;
+}
+
+@mixin main-heading () {
+  @include font(54px, 66px);
+  @include font-extra-bold ();
+  color: $light;
+  margin-top: 0;
+}
+
+@mixin title () {
+  @include font(28px, 42px);
+  @include font-bold ();
+  color: $dark;
+  margin-top: 0;
+}
+
+@mixin title-form () {
+  @include font(40px, 60px);
+  @include font-extra-bold ();
+  color: $dark;
+  margin-top: 0;
+}
