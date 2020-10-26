@@ -1,5 +1,6 @@
 .main-menu {
   display: flex;
+  flex-wrap: wrap;
   margin-left: auto;
 }
 
@@ -7,24 +8,26 @@
   display: none;
 }
 
-.main-menu__wrapper {
+.main-menu__wrapper-content {
   display: none;
 }
 
 .main-menu__list {
   @include list-reset();
   display: flex;
-  padding-top: 48px;
+  top: 0;
+  padding-top: 10px;
 }
 
 .main-menu__list-item:not(:last-child) {
-  margin-right: 33px ;
+  margin-right: 33px;
 }
 
 .main-menu__link {
-  @include font (16px, 20px);
+  @include font(16px, 20px);
   @include font-medium;
-  @include link-reset ($light);
+  @include link-reset($light);
+  letter-spacing: 1.5px;
 
   &:hover {
     color: $light-hover;
@@ -32,5 +35,130 @@
 
   &:focus {
     color: $light-active;
+  }
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .main-menu__list {
+    padding-top: 2px;
+  }
+
+  .main-menu__list-item:not(:last-child) {
+    margin-right: 21px;
+  }
+
+  .main-menu__link {
+    @include font(14px, 17px);
+  }
+}
+
+@media (min-width: 0) and (max-width: $mobile-max-width) {
+  .page-header {
+    .main-menu {
+      background-color: none;
+    }
+
+    .main-menu__svg {
+      stroke: $light;
+    }
+
+    .main-menu__button-open {
+      display: block;
+      margin-left: auto;
+
+      &:hover .main-menu__svg {
+        stroke: $light-hover;
+      }
+
+      &:focus .main-menu__svg {
+        stroke: $light-active;
+      }
+    }
+
+    .main-menu__wrapper {
+      display: none;
+    }
+
+    .main-menu__link {
+      @include font(18px, 22px);
+
+      &:hover {
+        color: $dark-hover;
+      }
+
+      &:focus {
+        color: $dark-active;
+      }
+    }
+  }
+
+  .page-header.page-header--opened {
+    .main-menu__button-open {
+      display: none;
+    }
+
+    .main-menu__wrapper {
+      display: block;
+    }
+  }
+
+  .no-js {
+    .page-header {
+      .main-menu {
+        width: 100%;
+        margin-left: 0;
+        @include alignment-mobile();
+        min-height: 299px;
+        box-sizing: border-box;
+        background-color: $light;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .main-menu__wrapper {
+        display: block;
+      }
+
+      .main-menu__wrapper-content {
+        display: block;
+      }
+
+      .main-menu__link-logo img {
+        @include size(42px, 22px);
+      }
+
+      .main-menu__link-logo {
+        display: block;
+        margin-bottom: 50px;
+      }
+
+      .main-menu__button-open {
+        display: none;
+      }
+
+      .main-menu__button-close {
+        display: none;
+      }
+
+      .main-menu__list {
+        flex-direction: column;
+      }
+
+      .main-menu__list-item {
+        margin-bottom: 30px;
+      }
+
+      .main-menu__link {
+        color: $dark;
+
+        &:hover {
+          color: $dark-hover;
+        }
+
+        &:focus {
+          color: $dark-active;
+        }
+      }
+    }
   }
 }

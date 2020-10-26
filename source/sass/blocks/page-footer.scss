@@ -1,0 +1,32 @@
+.page-footer {
+  background-color: $dark;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.page-footer__wrapper {
+  max-width: 1366px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-left: 94px;
+  padding-right: 111px;
+  display: flex;
+}
+
+.page-footer__nav.main-menu {
+  margin-left: 0;
+
+  .main-menu__list-item {
+    margin-right: 0;
+    margin-left: 35px;
+  }
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .page-footer__wrapper {
+    padding-left: 45px;
+    padding-right: 45px;
+    display: flex;
+  }
+
+}

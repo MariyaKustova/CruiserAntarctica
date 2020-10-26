@@ -1,57 +1,78 @@
-@mixin font ($size, $line-height) {
+@mixin font($size, $line-height) {
   font-size: $size;
   line-height: $line-height;
 }
 
-@mixin list-reset () {
+@mixin list-reset() {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-@mixin link-reset ($color) {
+@mixin link-reset($color) {
   text-decoration: none;
   color: $color;
 }
 
-@mixin size ($widht, $height) {
+@mixin size($widht, $height) {
   width: $widht;
   height: $height;
 }
 
-@mixin font-regular () {
+@mixin font-regular() {
   font-family: "Monserrat-Regular", "Arial", sans-serif;
 }
 
-@mixin font-medium () {
+@mixin font-medium() {
   font-family: "Monserrat-Medium", "Arial", sans-serif;
 }
 
-@mixin font-bold () {
+@mixin font-bold() {
   font-family: "Monserrat-Bold", "Arial", sans-serif;
 }
 
-@mixin font-extra-bold () {
+@mixin font-extra-bold() {
   font-family: "Monserrat-Extra-Bold", "Arial", sans-serif;
 }
 
-@mixin main-heading () {
+@mixin main-heading() {
   @include font(54px, 66px);
-  @include font-extra-bold ();
+  @include font-extra-bold();
   color: $light;
   margin-top: 0;
 }
 
-@mixin title () {
+@mixin title() {
   @include font(28px, 42px);
-  @include font-bold ();
+  @include font-bold();
   color: $dark;
   margin-top: 0;
 }
 
-@mixin title-form () {
+@mixin title-form() {
   @include font(40px, 60px);
-  @include font-extra-bold ();
+  @include font-extra-bold();
   color: $dark;
   margin-top: 0;
+}
+
+@mixin alignment-desktop() {
+  max-width: 1366px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-left: 103px;
+  padding-right: 103px;
+}
+
+@mixin alignment-tablet() {
+  max-width: auto;
+  min-width: 768px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+@mixin alignment-mobile() {
+  min-width: 320px;
+  padding-left: 15px;
+  padding-right: 15px;
 }

@@ -1,0 +1,23 @@
+.social-contacts {
+  display: flex;
+  margin-left: auto;
+  margin-top: 11px;
+}
+
+.social-contacts__item {
+  margin-left: 34px;
+}
+
+.social-contacts__svg {
+  fill: $light;
+}
+
+.social-contacts__link {
+  &:hover .social-contacts__svg {
+    fill: $light-hover;
+  }
+
+  &:focus .social-contacts__svg {
+    fill: $light-active;
+  }
+}

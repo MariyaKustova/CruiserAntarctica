@@ -1,45 +1,105 @@
 .page-header {
   background-image: url("../img/Background\ 1.png");
   background-position: center top;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 650px;
   min-height: 650px;
 }
 
 .page-header__wrapper-alignment {
-  max-width: 1366px;
-  margin: 0 auto;
-  padding-left: 103px;
-  padding-right: 103px;
+  @include alignment-desktop();
   display: flex;
+  padding-top: 35px;
+  margin-bottom: 197px;
 }
 
 .page-header__link-logo {
   display: block;
   @include size(70px, 38px);
+  padding-right: 50px;
 }
 
 .page-header__heading {
-  @include main-heading ();
+  @include main-heading();
+  @include alignment-desktop();
+  padding-left: 200px;
+  letter-spacing: 3.5px;
+  margin-bottom: 12px;
 }
 
-.page-header__subheading {
+.page-header__text {
   @include font(20px, 25px);
-  @include font-regular ();
+  @include font-regular();
   color: $light;
   margin-top: 0;
+  @include alignment-desktop();
+  padding-left: 198px;
+  padding-bottom: 50px;
+  letter-spacing: 1.7px;
 }
 
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
   .page-header {
     min-height: 638px;
+    background-size: auto;
   }
 
   .page-header__wrapper-alignment {
-    max-width: auto;
-    min-width: 768px;
-    padding-left: 45px;
-    padding-right: 45px;
+    @include alignment-tablet();
+    padding-top: 29px;
+    margin-bottom: 215px;
   }
 
+  .page-header__heading {
+    @include alignment-tablet();
+    letter-spacing: 0.5px;
+    margin-bottom: 9px;
+  }
 
+  .page-header__text {
+    @include alignment-tablet();
+    letter-spacing: 0.5px;
+  }
+
+  .page-header__link-logo {
+    display: block;
+    @include size(38px, 20px);
+  }
+}
+
+@media (min-width: 0) and (max-width: $mobile-max-width) {
+  .no-js {
+    .page-header__link-logo {
+      display: none;
+    }
+
+    .page-header {
+      min-height: 500px;
+    }
+
+    .page-header__wrapper-alignment {
+      min-width: 320px;
+      max-width: 100%;
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 70px;
+    }
+
+    .page-header__link-logo {
+      @include size(42px, 22px);
+      padding-right: 20px;
+    }
+  }
+
+  .page-header__wrapper-alignment {
+    @include alignment-mobile();
+  }
+
+  .page-header--opened {
+    .page-header__link-logo {
+      display: none;
+    }
+
+  }
 }
