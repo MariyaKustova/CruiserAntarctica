@@ -4,8 +4,12 @@
   margin-top: 11px;
 }
 
+.social-contacts__list {
+  @include list-reset();
+}
+
 .social-contacts__item {
-  margin-left: 34px;
+  margin-left: 33px;
 }
 
 .social-contacts__svg {
@@ -19,5 +23,53 @@
 
   &:focus .social-contacts__svg {
     fill: $light-active;
+  }
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .social-contacts {
+    margin-top: 2px;
+    margin-left: auto;
+  }
+
+  .social-contacts__item {
+    margin-left: 23px;
+  }
+
+  .social-contacts__link--facebook svg {
+    @include size(9px, 16px);
+  }
+
+  .social-contacts__link--instagram svg {
+    @include size(16px, 16px);
+  }
+
+  .social-contacts__link--twitter svg {
+    @include size(16px, 13px);
+  }
+}
+
+@media (min-width: 0) and (max-width: $mobile-max-width) {
+  .social-contacts {
+    margin-top: 2px;
+    margin-left: 0;
+    @include list-reset();
+  }
+
+  .social-contacts__item {
+    margin-left: 0;
+    margin-right: 23px;
+  }
+
+  .social-contacts__link--facebook svg {
+    @include size(9px, 16px);
+  }
+
+  .social-contacts__link--instagram svg {
+    @include size(16px, 16px);
+  }
+
+  .social-contacts__link--twitter svg {
+    @include size(16px, 13px);
   }
 }
