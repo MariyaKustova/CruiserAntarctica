@@ -1,8 +1,8 @@
 .page-header {
-  background-image: url("../img/Background\ 1.png");
+  background-image: url("../img/Background-1.png");
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: 100% 650px;
+  background-size: 100% 100%;
   min-height: 650px;
 }
 
@@ -16,14 +16,13 @@
 .page-header__link-logo {
   display: block;
   @include size(70px, 38px);
-  padding-right: 50px;
+  margin-right: 50px;
 }
 
 .page-header__heading {
   @include main-heading();
   @include alignment-desktop();
   padding-left: 200px;
-  letter-spacing: 3.5px;
   margin-bottom: 12px;
 }
 
@@ -35,30 +34,29 @@
   @include alignment-desktop();
   padding-left: 198px;
   padding-bottom: 50px;
-  letter-spacing: 1.7px;
 }
 
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
   .page-header {
     min-height: 638px;
-    background-size: auto;
+    background-image: url("../img/background-tablet-1.png");
   }
 
   .page-header__wrapper-alignment {
     @include alignment-tablet();
     padding-top: 29px;
-    margin-bottom: 215px;
+    margin-bottom: 219px;
   }
 
   .page-header__heading {
+    @include font(50px, 61px);
     @include alignment-tablet();
-    letter-spacing: 0.5px;
-    margin-bottom: 9px;
+    margin-bottom: 12px;
   }
 
   .page-header__text {
     @include alignment-tablet();
-    letter-spacing: 0.5px;
+    @include font(18px, 22px);
   }
 
   .page-header__link-logo {
@@ -68,6 +66,38 @@
 }
 
 @media (min-width: 0) and (max-width: $mobile-max-width) {
+  .page-header {
+    min-height: 500px;
+    background-image: url("../img/background-mobile-1.png");
+    position: relative;
+  }
+
+  .page-header__wrapper-alignment {
+    @include alignment-mobile();
+    padding-top: 20px;
+    margin-bottom: 219px;
+  }
+
+  .page-header__heading {
+    @include font(36px, 45px);
+    @include alignment-mobile();
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-header__text {
+    @include alignment-mobile();
+    @include font(16px, 22px);
+    padding-right: 80px;
+  }
+
+  .page-header__link-logo {
+    display: block;
+    @include size(38px, 20px);
+    margin-left: 2px;
+  }
+
   .no-js {
     .page-header__link-logo {
       display: none;
@@ -94,12 +124,12 @@
 
   .page-header__wrapper-alignment {
     @include alignment-mobile();
+    margin-bottom: 137px;
   }
 
   .page-header--opened {
     .page-header__link-logo {
       display: none;
     }
-
   }
 }

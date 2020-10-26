@@ -7,14 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Круизы в Антарктику</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="./fonts/montserrat-extra-bold.woff2" as="font" />
-  <link rel="preload" href="./fonts/montserrat-extra-bold.woff" as="font" />
-  <link rel="preload" href="./fonts/montserrat-extra-bold.woff2" as="font" />
-  <link rel="preload" href="./fonts/montserrat-extra-bold.woff" as="font" />
-  <link rel="preload" href="./fonts/montserrat-medium.woff2" as="font" />
-  <link rel="preload" href="./fonts/montserrat-medium.woff" as="font" />
-  <link rel="preload" href="./fonts/montserrat-regular.woff2" as="font" />
-  <link rel="preload" href="./fonts/montserrat-regular.woff" as="font" />
+  <link rel="preload" href="./fonts/montserrat-extra-bold.woff2" as="font" type="font/woff" crossorigin />
+  <link rel="preload" href="./fonts/montserrat-extra-bold.woff" as="font" type="font/woff" crossorigin />
+  <link rel="preload" href="./fonts/montserrat-extra-bold.woff2" as="font" type="font/woff" crossorigin />
+  <link rel="preload" href="./fonts/montserrat-extra-bold.woff" as="font" type="font/woff" crossorigin />
+  <link rel="preload" href="./fonts/montserrat-medium.woff2" as="font" type="font/woff" crossorigin />
+  <link rel="preload" href="./fonts/montserrat-medium.woff" as="font" type="font/woff" crossorigin />
+  <link rel="preload" href="./fonts/montserrat-regular.woff2" as="font" type="font/woff" crossorigin />
+  <link rel="preload" href="./fonts/montserrat-regular.woff" as="font" type="font/woff" crossorigin />
   <script>
     // Picture element HTML5 shiv
     document.createElement("picture");
@@ -22,8 +22,8 @@
   <script src="./js/vendor/picturfill.min.js" async></script>
 </head>
 
-<body class="">
-  <header class="page-header page-header--opened">
+<body class="no-js">
+  <header class="page-header">
     <div class="page-header__wrapper-alignment">
       <a class="page-header__link-logo" href="#">
         <img src="./img/logo.svg" width="70" height="38" alt="Логотип">
@@ -63,7 +63,8 @@
       </nav>
     </div>
     <h1 class="page-header__heading">
-      Круизы в Антарктику
+      <span>Круизы</span>
+      <span>в Антарктику</span>
     </h1>
     <p class="page-header__text">
       Волшебный мир айсбергов и пингвинов
@@ -122,6 +123,8 @@
       </ul>
     </div>
   </footer>
+
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

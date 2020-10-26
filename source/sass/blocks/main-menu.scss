@@ -27,7 +27,6 @@
   @include font(16px, 20px);
   @include font-medium;
   @include link-reset($light);
-  letter-spacing: 1.5px;
 
   &:hover {
     color: $light-hover;
@@ -44,7 +43,7 @@
   }
 
   .main-menu__list-item:not(:last-child) {
-    margin-right: 21px;
+    margin-right: 24px;
   }
 
   .main-menu__link {
@@ -54,17 +53,21 @@
 
 @media (min-width: 0) and (max-width: $mobile-max-width) {
   .page-header {
-    .main-menu {
-      background-color: none;
-    }
-
     .main-menu__svg {
       stroke: $light;
+      width: 30px;
+      height: 14px;
+      position: relative;
+      top: 3px;
+      right: 0px;
     }
 
     .main-menu__button-open {
       display: block;
       margin-left: auto;
+      padding: 0;
+      position: relative;
+    left: 3px;
 
       &:hover .main-menu__svg {
         stroke: $light-hover;
@@ -76,6 +79,7 @@
     }
 
     .main-menu__wrapper {
+      background-color: transparent;
       display: none;
     }
 
@@ -97,8 +101,65 @@
       display: none;
     }
 
+    .main-menu__button-close {
+      padding: 0;
+      position: relative;
+      top: 1px;
+      right: 8px;
+      height: 20px;
+    }
+
     .main-menu__wrapper {
       display: block;
+      width: 100%;
+    }
+
+    .main-menu {
+      width: 100%;
+      margin-left: 0;
+      @include alignment-mobile();
+      min-height: 299px;
+      box-sizing: border-box;
+      background-color: $light;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .main-menu__wrapper-content {
+      display: flex;
+      margin-bottom: 32px;
+    }
+
+    .main-menu__link-logo img {
+      @include size(42px, 22px);
+    }
+
+    .main-menu__link-logo {
+      display: block;
+      margin-right: auto;
+    }
+
+    .main-menu__list {
+      flex-direction: column;
+    }
+
+    .main-menu__list-item {
+      margin-bottom: 21px;
+    }
+
+    .main-menu__link {
+      color: $dark;
+
+      &:hover {
+        color: $dark-hover;
+      }
+
+      &:focus {
+        color: $dark-active;
+      }
     }
   }
 
