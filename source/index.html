@@ -102,12 +102,50 @@
               ./img/Rectangle-tablet@1x.png.png 1x,
               ./img/Rectangle-tablet@2x.png 2x
             " />
-            <img class="journey-section__img" src="./img/Rectangle-mobile@1x.png"
+          <img class="journey-section__img" src="./img/Rectangle-mobile@1x.png"
             srcset="./img/Rectangle-mobile@2x.png 2x" loading="lazy" alt="Фотография  пингвинов" />
         </picture>
       </div>
     </section>
-    <section class="page-main__benefits benefits-section" id="benefits"></section>
+    <section class="page-main__benefits benefits-section" id="benefits">
+      <div class="benefits-section__wrapper">
+        <h2 class="benefits-section__title">Преимущества</h2>
+        <div class="benefits-section__container">
+          <ul class="benefits-section__list">
+            <li class="benefits-section__item">
+              <svg class="benefits-section__svg benefits-section__svg--boat" width="27px" height="32px">
+                <use xlink:href="./img/sprite.svg#icon-boat"></use>
+              </svg>
+              <h3 class="benefits-section__title-card">
+                <span>Небольшой</span>
+                <span>круизный лайнер</span></h3>
+              <p class="benefits-section__text">Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать
+                шума и очередей и даст возможность насладиться видами и природой.</p>
+            </li>
+            <li class="benefits-section__item">
+              <svg class="benefits-section__svg benefits-section__svg--checks" width="38px" height="21px">
+                <use xlink:href="./img/sprite.svg#icon-checks"></use>
+              </svg>
+              <h3 class="benefits-section__title-card">
+                <span>Система</span>
+                <span>все включено</span></h3>
+              <p class="benefits-section__text">Все наши круизы работают
+                по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для вас 24 часа.</p>
+            </li>
+            <li class="benefits-section__item">
+              <svg class="benefits-section__svg benefits-section__svg--ship" width="42px" height="15px">
+                <use xlink:href="./img/sprite.svg#icon-ship"></use>
+              </svg>
+              <h3 class="benefits-section__title-card">
+                <span>Экскурсионные</span>
+                <span>туры на Zodiac</span></h3>
+              <p class="benefits-section__text">Экскурсионные туры к берегам Антарктиды совершаются на оборудованных
+                лодках типа Zodiac в сопровождении опытных экскурсоводов.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
     <section class="page-main__cruises cruises-section" id="cruises"></section>
     <section class="page-main__form form-section"></section>
     <section class="page-main__contacts contacts-section" id="contacts"></section>
@@ -160,9 +198,9 @@
   </footer>
 
   <script src="./js/vendor/svg4everybody.min.js"></script>
-    <script>
-      svg4everybody();
-    </script>
+  <script>
+    svg4everybody();
+  </script>
   <script src="./js/script.min.js"></script>
 </body>
 
