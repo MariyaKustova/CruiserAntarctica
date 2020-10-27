@@ -1,0 +1,71 @@
+.journey-section {
+  @include alignment-desktop();
+  display: flex;
+  margin-bottom: 116px;
+}
+
+.journey-section__wrapper-text {
+  width: calc(50% - 65px);
+}
+
+.journey-section__title {
+  @include title();
+  margin-top: 56px;
+  margin-bottom: 24px;
+}
+
+.journey-section__text {
+  @include font(16px, 24px);
+  letter-spacing: 1.1px;
+}
+
+.journey-section__wrapper-img {
+  margin-left: auto;
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .journey-section {
+    @include alignment-tablet();
+    margin-bottom: 77px;
+  }
+
+  .journey-section__wrapper-text {
+    width: calc(50% - 20px);
+  }
+
+  .journey-section__title {
+    @include title-tablet();
+    margin-top: -9px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .journey-section__text {
+    letter-spacing: 1px;
+  }
+}
+
+@media (min-width: 0) and (max-width: $mobile-max-width) {
+  .journey-section {
+    @include alignment-mobile();
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+
+  .journey-section__wrapper-text {
+    width: 100%;
+  }
+
+  .journey-section__title {
+    @include title-mobile();
+    margin-top: 0;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .journey-section__text {
+    margin-bottom: 32px;
+  }
+}

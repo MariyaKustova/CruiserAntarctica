@@ -49,6 +49,14 @@
   margin-top: 0;
 }
 
+@mixin title-tablet() {
+  @include font(26px, 36px);
+}
+
+@mixin title-mobile() {
+  @include font(24px, 34px);
+}
+
 @mixin title-form() {
   @include font(40px, 60px);
   @include font-extra-bold();

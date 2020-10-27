@@ -71,7 +71,42 @@
     </p>
   </header>
   <main class="page-main">
-    <section class="page-main__journey journey-section"></section>
+    <section class="page-main__journey journey-section">
+      <div class="journey-section__wrapper-text">
+        <h2 class="journey-section__title">
+          <span>Путешествие</span>
+          <span>на край Земли</span></h2>
+        <p class="journey-section__text">Это волшебное путешествие поможет вам познакомиться поближе с удивительным
+          миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги,
+          несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+      </div>
+      <div class="journey-section__wrapper-img">
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="
+              ./img/webp/Rectangle-desktop@1x.webp 1x,
+              ./img/webp/Rectangle-desktop@2x.webp 2x
+            " />
+          <source type="image/webp" media="(min-width: 768px)" srcset="
+              ./img/webp/Rectangle-tablet@1x.webp 1x,
+              ./img/webp/Rectangle-tablet@1x.webp 2x
+            " />
+          <source type="image/webp" media="(min-width: 320px)" srcset="
+              ./img/webp/Rectangle-mobile@1x.webp 1x,
+              ./img/webp/Rectangle-mobile@1x.webp 2x
+            " />
+          <source media="(min-width: 320px)" srcset="
+              ./img/Rectangle-desktop@1x.png.png 1x,
+              ./img/Rectangle-desktop@2x.png 2x
+            " />
+          <source media="(min-width: 768px)" srcset="
+              ./img/Rectangle-tablet@1x.png.png 1x,
+              ./img/Rectangle-tablet@2x.png 2x
+            " />
+            <img class="journey-section__img" src="./img/Rectangle-mobile@1x.png"
+            srcset="./img/Rectangle-mobile@2x.png 2x" loading="lazy" alt="Фотография  пингвинов" />
+        </picture>
+      </div>
+    </section>
     <section class="page-main__benefits benefits-section" id="benefits"></section>
     <section class="page-main__cruises cruises-section" id="cruises"></section>
     <section class="page-main__form form-section"></section>
@@ -124,7 +159,11 @@
     </div>
   </footer>
 
-  <script src="./js/script.js"></script>
+  <script src="./js/vendor/svg4everybody.min.js"></script>
+    <script>
+      svg4everybody();
+    </script>
+  <script src="./js/script.min.js"></script>
 </body>
 
 </html>

@@ -1,11 +1,13 @@
 {
-  "name": "Liga-A-start-template",
+  "name": "cruiser-antarctica",
   "version": "1.0.0",
-  "description": "Стартовый шаблон сборки Лиги А",
+  "private": true,
+  "description": "Круизы в Антарктику",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
+    "del": "^5.1.0",
     "gulp": "4.0.x",
     "gulp-csso": "^3.0.1",
     "gulp-imagemin": "^5.0.3",
@@ -16,6 +18,7 @@
     "gulp-sass": "4.0.x",
     "gulp-sourcemaps": "2.6.x",
     "gulp-svgstore": "^7.0.1",
+    "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
     "pixel-glass": "^1.0.13",
     "posthtml-include": "^1.2.0",
@@ -50,6 +53,8 @@
     "node": "8.15"
   },
   "dependencies": {
-    "del": "^4.1.1"
+    "del": "^4.1.1",
+    "gulp-htmlmin": "^5.0.1",
+    "svg4everybody": "^2.1.9"
   }
 }
