@@ -1,0 +1,52 @@
+.cruiser-section {
+  @include alignment-desktop();
+}
+
+.cruises-section__title {
+  @include title();
+  text-align: center;
+}
+
+.cruises-section__list {
+  @include list-reset ();
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cruises-section__item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: calc((100% - 90px) / 4);
+  position: relative;
+}
+
+.cruises-section__item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.cruiser-section__wrapper-description {
+  padding: 35px 25px;
+  background-color: $dark;
+  display: none;
+}
+
+.cruiser-section__title-card {
+  @include font(18px, 27px);
+  @include font-bold();
+  color: $light;
+  margin-top: 0;
+}
+
+.cruiser-section__title-card {
+  @include font(14px, 20px);
+  @include font-medium();
+  color: $light;
+  margin-top: 0;
+}
+
+.cruiser-section__text {
+  @include font(14px, 20px);
+  @include font-regular();
+  color: $light;
+  margin-top: 0;
+}
