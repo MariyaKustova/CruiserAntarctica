@@ -3,7 +3,7 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  padding-bottom: 120px;
+  padding-bottom: 92px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../../img/backgroun-2@2x.png");
@@ -24,16 +24,20 @@
 .benefits-section__list {
   @include list-reset();
   display: flex;
+  flex-wrap: wrap;
 }
 
 .benefits-section__item {
   background-color: $backround-color;
   padding: 30px 30px 10px 30px;
-  width: 100%;
+  width: calc((100% - 80px) / 3);
+  box-sizing: border-box;
+  margin-right: 40px;
+  margin-bottom: 28px;
 }
 
-.benefits-section__item:not(:last-child) {
-  margin-right: 40px;
+.benefits-section__item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .benefits-section__svg--boat {
@@ -75,7 +79,7 @@
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
   .benefits-section {
     background-image: url("../../img/background-tablet-2.png");
-    padding-bottom: 99px;
+    padding-bottom: 71px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../../img/background-tablet-2@2x.png");
@@ -95,10 +99,15 @@
 
   .benefits-section__item {
     padding: 25px 17px 6px 20px;
+    width: calc((100% - 60px)/3);
   }
 
-  .benefits-section__item:not(:last-child) {
+  .benefits-section__item {
     margin-right: 30px;
+  }
+
+  .benefits-section__item:nth-child(3n) {
+    margin-right: 0;
   }
 
   .benefits-section__svg--boat {
@@ -131,7 +140,7 @@
 @media (min-width: 0) and (max-width: $mobile-max-width) {
   .benefits-section {
     background-image: url("../../img/background-mobile-2.png");
-    padding-bottom: 63px;
+    padding-bottom: 35px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../../img/background-mobile-2@2x.png");
@@ -156,11 +165,7 @@
   .benefits-section__item {
     width: auto;
     padding: 25px 17px 6px 20px;
-  }
-
-  .benefits-section__item:not(:last-child) {
     margin-right: 0;
-    margin-bottom: 28px;
   }
 
   .benefits-section__svg--boat {
