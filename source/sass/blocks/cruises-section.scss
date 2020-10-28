@@ -1,52 +1,169 @@
-.cruiser-section {
+.cruises-section {
   @include alignment-desktop();
+  padding-top: 110px;
+  padding-bottom: 90px;
 }
 
 .cruises-section__title {
   @include title();
   text-align: center;
+  margin-bottom: 49px;
 }
 
 .cruises-section__list {
   @include list-reset ();
   display: flex;
   flex-wrap: wrap;
+  padding: 0 15px;
 }
 
 .cruises-section__item {
   margin-right: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
   width: calc((100% - 90px) / 4);
   position: relative;
+
+  &:hover .cruises-section__wrapper-description {
+    display: flex;
+  }
 }
 
 .cruises-section__item:nth-child(4n) {
   margin-right: 0;
 }
 
-.cruiser-section__wrapper-description {
-  padding: 35px 25px;
+.cruises-section__wrapper-description {
+  padding: 29px 25px 34px;
   background-color: $dark;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 386px;
+  box-sizing: border-box;
   display: none;
+  flex-direction: column;
 }
 
-.cruiser-section__title-card {
+.cruises-section__title-description {
   @include font(18px, 27px);
-  @include font-bold();
+  @include font-regular();
   color: $light;
   margin-top: 0;
+  margin-bottom: 13px;
 }
 
-.cruiser-section__title-card {
+.cruises-section__subheading {
   @include font(14px, 20px);
   @include font-medium();
   color: $light;
   margin-top: 0;
+  margin-bottom: 2px;
 }
 
-.cruiser-section__text {
+.cruises-section__text {
+  @include font(14px, 20px);
+  @include font-regular();
+  color: $light;
+  margin-bottom: 10px;
+}
+
+.cruises-section__link {
+  @include link-reset($dark);
+  @include font(14px, 21px);
+  @include font-bold();
+  display: block;
+  background: $light;
+  text-align: center;
+  padding: 10px 10px;
+  margin-top: auto;
+
+  &:hover {
+    color: $dark-hover;
+  }
+
+  &:active {
+    color: $dark-active;
+  }
+}
+
+.cruises-section__title-card {
+  @include font(18px, 27px);
+  @include font-regular();
+  color: $light;
+  margin-top: 0;
+  position: absolute;
+  bottom: 8px;
+  left: 31px;
+}
+
+.cruises-section__text {
   @include font(14px, 20px);
   @include font-regular();
   color: $light;
   margin-top: 0;
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .cruises-section {
+    @include alignment-tablet();
+    padding-top: 91px;
+    padding-bottom: 70px;
+  }
+
+  .cruises-section__title {
+    @include font(26px, 39px);
+  }
+
+  .cruises-section__item {
+    width: calc((100% - 30px) / 2);
+  }
+
+  .cruises-section__item:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .cruises-section__title-card {
+    bottom: 13px;
+    left: 36px;
+  }
+
+  .cruises-section__wrapper-description {
+    padding: 29px 35px 34px;
+  }
+}
+
+@media (min-width: 0) and (max-width: $mobile-max-width) {
+  .cruises-section {
+    @include alignment-mobile();
+    padding-top: 57px;
+    padding-bottom: 35px;
+  }
+
+  .cruises-section__title {
+    @include font(24px, 36px);
+    margin-bottom: 30px;
+  }
+
+  .cruises-section__list {
+    padding: 0 10px;
+  }
+
+  .cruises-section__item {
+    width: 100%;
+  }
+
+  .cruises-section__item:nth-child(n) {
+    margin-right: 0;
+  }
+
+  .cruises-section__title-card {
+    bottom: 13px;
+    left: 36px;
+  }
+
+  .cruises-section__wrapper-description {
+    padding: 29px 26px 34px;
+  }
+
+
 }
