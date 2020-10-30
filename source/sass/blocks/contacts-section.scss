@@ -1,0 +1,125 @@
+.contacts-section {
+  @include alignment-desktop();
+  padding: 120px 110px 120px 105px;
+  display: flex;
+}
+
+.contacts-section__map {
+  @include size (560px, 306px);
+  margin-right: 100px;
+}
+
+.contacts-section__wrapper {
+  width: calc(100% - 560px - 100px);
+  box-sizing: border-box;
+  padding-top: 57px;
+}
+
+.contacts-section__list {
+  @include list-reset();
+}
+
+.contacts-section__item {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.contacts-section__text {
+  @include font-medium();
+  @include font(18px, 27px);
+  color: $dark;
+  margin-bottom: 32px;
+}
+
+.contacts-section__address {
+  @include font-regular();
+  @include font(16px, 24px);
+  color: $dark;
+  margin-top: 0;
+}
+
+.contacts-section__link {
+  @include link-reset($dark);
+  @include font-regular();
+  @include font(16px, 24px);
+  display: flex;
+  align-items: center;
+}
+
+.contacts-section__svg {
+  margin-right: 8px;
+}
+
+.contacts-section__svg--pointer {
+  @include size(18px, 22px);
+}
+.contacts-section__svg--tel {
+  @include size(18px, 18px);
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  .contacts-section {
+    @include alignment-tablet();
+    padding: 100px 55px 100px 45px;
+  }
+
+  .contacts-section__map {
+    @include size (324px, 335px);
+    margin-right: 30px;
+  }
+
+  .contacts-section__wrapper {
+    width: calc(100% - 324px - 30px);
+    padding-top: 48px;
+  }
+
+  .contacts-section__text {
+    margin-bottom: 27px;
+  }
+
+  .contacts-section__svg {
+    margin-right: 10px;
+  }
+
+  .contacts-section__svg--pointer {
+    width: 26px;
+    height: 22px;
+    position: relative;
+    top: 5px;
+  }
+}
+
+@media (min-width: 0) and (max-width: $mobile-max-width) {
+  .contacts-section {
+    @include alignment-mobile();
+    padding: 10px 15px 77px 15px;
+    flex-direction: column-reverse;
+  }
+
+  .contacts-section__map {
+    width: auto;
+    margin-right: 0;
+  }
+
+  .contacts-section__wrapper {
+    width: auto;
+    padding-top: 48px;
+    margin-bottom: 30px;
+  }
+
+  .contacts-section__text {
+    margin-top: 0;
+    margin-bottom: 27px;
+  }
+
+  .contacts-section__svg {
+    margin-right: 10px;
+  }
+
+  .contacts-section__svg--pointer {
+    width: 26px;
+    height: 22px;
+    position: relative;
+    top: 5px;
+  }
+}

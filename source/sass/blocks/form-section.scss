@@ -11,7 +11,7 @@
 
 .form-section__wrapper-content {
   @include alignment-desktop();
-  padding: 50px 164px 51px 163px;
+  padding: 50px 162px 51px 163px;
   display: flex;
 }
 
@@ -48,7 +48,7 @@
   @include font(18px, 27px);
   color: $light;
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }
 
 .form-section__form {
@@ -100,9 +100,9 @@
 }
 
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
-  .benefits-section {
+  .form-section {
     background-image: url("../../img/background-3-tablet@1x.png");
-    padding-bottom: 71px;
+    padding-bottom: 101px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../../img/background-3-tablet@2x.png");
@@ -112,7 +112,7 @@
   .form-section__wrapper-content {
     @include alignment-tablet();
     flex-direction: column;
-    padding-bottom: 101px;
+    padding-bottom: 0;
   }
 
   .form-section__wrapper-text {
@@ -141,9 +141,9 @@
 }
 
 @media (min-width: 0) and (max-width: $mobile-max-width) {
-  .benefits-section {
+  .form-section {
     background-image: url("../../img/background-3-mobile@1x.png");
-    padding-bottom: 71px;
+    padding-bottom: 65px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../../img/background-3-mobile@2x.png");
@@ -154,7 +154,7 @@
     @include alignment-mobile();
     flex-direction: column;
     padding-top: 29px;
-    padding-bottom: 65px;
+    padding-bottom: 0;
   }
 
   .form-section__wrapper-text {
