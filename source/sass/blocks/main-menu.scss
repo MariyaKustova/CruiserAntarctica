@@ -4,12 +4,16 @@
   margin-left: auto;
 }
 
-.main-menu__button-open {
+.main-menu__button {
+  background-color: transparent;
+  border: none;
   display: none;
-}
+  cursor: pointer;
 
-.main-menu__wrapper-content {
-  display: none;
+  &:active,
+  &:focus {
+    outline: 2px solid #81b3d2;
+  }
 }
 
 .main-menu__list {
@@ -20,12 +24,12 @@
 }
 
 .main-menu__list-item:not(:last-child) {
-  margin-right: 33px;
+  margin-right: 34px;
 }
 
 .main-menu__link {
   @include font(16px, 20px);
-  @include font-medium;
+  @include font-500;
   @include link-reset($light);
 
   &:hover {
@@ -53,7 +57,7 @@
 
 @media (min-width: 0) and (max-width: $mobile-max-width) {
   .page-header {
-    .main-menu__svg {
+    .main-menu__svg--open {
       stroke: $light;
       width: 30px;
       height: 14px;
@@ -62,18 +66,22 @@
       right: 0px;
     }
 
-    .main-menu__button-open {
+    .main-menu__svg--close {
+      display: none;
+    }
+
+    .main-menu__button {
       display: block;
       margin-left: auto;
       padding: 0;
       position: relative;
-    left: 3px;
+      left: 3px;
 
-      &:hover .main-menu__svg {
+      &:hover .main-menu__svg--open {
         stroke: $light-hover;
       }
 
-      &:focus .main-menu__svg {
+      &:focus .main-menu__svg--open {
         stroke: $light-active;
       }
     }
@@ -97,16 +105,26 @@
   }
 
   .page-header.page-header--opened {
-    .main-menu__button-open {
+    .main-menu__button {
+      top: -39px;
+      right: 8px;
+      height: 20px;
+
+      &:hover .main-menu__svg--close {
+        stroke: $dark-hover;
+      }
+
+      &:focus .main-menu__svg--close {
+        stroke: $dark-active;
+      }
+    }
+
+    .main-menu__svg--open {
       display: none;
     }
 
-    .main-menu__button-close {
-      padding: 0;
-      position: relative;
-      top: 1px;
-      right: 8px;
-      height: 20px;
+    .main-menu__svg--close {
+      display: block;
     }
 
     .main-menu__wrapper {
@@ -118,35 +136,20 @@
       width: 100%;
       margin-left: 0;
       @include alignment-mobile();
-      min-height: 299px;
+      min-height: 259px;
       box-sizing: border-box;
       background-color: $light;
       padding-top: 20px;
-      padding-bottom: 20px;
       position: absolute;
-      top: 0;
+      top: 40px;
       left: 0;
-    }
-
-    .main-menu__wrapper-content {
-      display: flex;
-      margin-bottom: 32px;
-    }
-
-    .main-menu__link-logo img {
-      @include size(42px, 22px);
-    }
-
-    .main-menu__link-logo {
-      display: block;
-      margin-right: auto;
     }
 
     .main-menu__list {
       flex-direction: column;
     }
 
-    .main-menu__list-item {
+    .main-menu__list-item:not(:last-child) {
       margin-bottom: 21px;
     }
 
@@ -166,38 +169,20 @@
   .no-js {
     .page-header {
       .main-menu {
-        width: 100%;
+        width: auto;
         margin-left: 0;
         @include alignment-mobile();
-        min-height: 299px;
+        min-height: 257px;
         box-sizing: border-box;
         background-color: $light;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 36px;
       }
 
       .main-menu__wrapper {
         display: block;
       }
 
-      .main-menu__wrapper-content {
-        display: block;
-      }
-
-      .main-menu__link-logo img {
-        @include size(42px, 22px);
-      }
-
-      .main-menu__link-logo {
-        display: block;
-        margin-bottom: 50px;
-      }
-
-      .main-menu__button-open {
-        display: none;
-      }
-
-      .main-menu__button-close {
+      .main-menu__button {
         display: none;
       }
 
@@ -206,7 +191,7 @@
       }
 
       .main-menu__list-item {
-        margin-bottom: 30px;
+        margin-bottom: 21px;
       }
 
       .main-menu__link {

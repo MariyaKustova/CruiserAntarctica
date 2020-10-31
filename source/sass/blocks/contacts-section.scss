@@ -5,7 +5,7 @@
 }
 
 .contacts-section__map {
-  @include size (560px, 306px);
+  @include size (559px, auto);
   margin-right: 100px;
 }
 
@@ -13,6 +13,7 @@
   width: calc(100% - 560px - 100px);
   box-sizing: border-box;
   padding-top: 57px;
+  padding-bottom: 71px;
 }
 
 .contacts-section__list {
@@ -25,14 +26,15 @@
 }
 
 .contacts-section__text {
-  @include font-medium();
+  @include font-500();
   @include font(18px, 27px);
   color: $dark;
   margin-bottom: 32px;
 }
 
 .contacts-section__address {
-  @include font-regular();
+  width: calc(100% - 18px - 8px);
+  @include font-400();
   @include font(16px, 24px);
   color: $dark;
   margin-top: 0;
@@ -40,7 +42,7 @@
 
 .contacts-section__link {
   @include link-reset($dark);
-  @include font-regular();
+  @include font-400();
   @include font(16px, 24px);
   display: flex;
   align-items: center;
@@ -92,19 +94,20 @@
 @media (min-width: 0) and (max-width: $mobile-max-width) {
   .contacts-section {
     @include alignment-mobile();
-    padding: 10px 15px 77px 15px;
+    padding: 10px 15px 46px 15px;
     flex-direction: column-reverse;
   }
 
   .contacts-section__map {
     width: auto;
+    height: 335px;
     margin-right: 0;
   }
 
   .contacts-section__wrapper {
     width: auto;
     padding-top: 48px;
-    margin-bottom: 30px;
+    padding-bottom: 31px;
   }
 
   .contacts-section__text {
@@ -117,8 +120,6 @@
   }
 
   .contacts-section__svg--pointer {
-    width: 26px;
-    height: 22px;
     position: relative;
     top: 5px;
   }

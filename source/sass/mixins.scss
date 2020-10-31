@@ -19,32 +19,29 @@
   height: $height;
 }
 
-@mixin font-regular() {
-  font-family: "Montserrat-Regular", "Arial", sans-serif;
+@mixin font-400() {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
 }
 
-@mixin font-medium() {
-  font-family: "Montserrat-Medium", "Arial", sans-serif;
+@mixin font-500() {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
 }
 
-@mixin font-bold() {
-  font-family: "Montserrat-Bold", "Arial", sans-serif;
+@mixin font-600() {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 600;
 }
 
-@mixin font-extra-bold() {
-  font-family: "Montserrat-Extra-Bold", "Arial", sans-serif;
-}
-
-@mixin main-heading() {
-  @include font(54px, 66px);
-  @include font-extra-bold();
-  color: $light;
-  margin-top: 0;
+@mixin font-700() {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
 }
 
 @mixin title() {
   @include font(28px, 42px);
-  @include font-bold();
+  @include font-600();
   color: $dark;
   margin-top: 0;
 }
@@ -59,7 +56,7 @@
 
 @mixin title-form() {
   @include font(40px, 60px);
-  @include font-extra-bold();
+  @include font-700();
   color: $dark;
   margin-top: 0;
 }

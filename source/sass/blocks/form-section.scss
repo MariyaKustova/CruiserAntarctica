@@ -1,11 +1,12 @@
 .form-section {
-  background-image: url("../../img/background-3.png");
+  background-image: url("../img/background-3.png");
+  background-color: $light-blue;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../../img/backgroun-3@2x.png");
+    background-image: url("../img/backgroun-3@2x.png");
   }
 }
 
@@ -21,14 +22,14 @@
 }
 
 .form-section__title {
-  @include font-extra-bold();
+  @include font-700();
   @include font(40px, 60px);
   color: $dark;
   margin-bottom: 8px;
 }
 
 .form-section__text {
-  @include font-regular();
+  @include font-400();
   @include font(18px, 27px);
   color: $dark;
   margin-top: 0;
@@ -44,7 +45,7 @@
 }
 
 .form-section__description {
-  @include font-regular();
+  @include font-400();
   @include font(18px, 27px);
   color: $light;
   margin-top: 0;
@@ -65,47 +66,69 @@
   box-sizing: border-box;
   background-color: $light;
   color: $dark;
-  @include font-regular();
+  @include font-400();
   @include font(14px, 21px);
   padding: 12px 16px 10px;
   border: none;
 }
 
-.form-section__wrapper-checkbox {
+.form-section__label--checkbox {
   display: flex;
   align-items: center;
 }
 
-.form-section__input-checkbox {
-  border: none;
-  background-color: $light;
+.form-section__checkbox {
+  display: block;
   @include size (18px, 18px);
   margin-right: 6px;
+  background-color: $light;
+}
+
+.form-section__svg {
+  @include size (18px, 10px);
+  fill: none;
+  display: none;
+}
+
+.form-section__input-checkbox:checked + .form-section__checkbox {
+  .form-section__svg {
+    display: block;
+    position: relative;
+    top: 4px;
+  }
 }
 
 .form-section__form-text {
-  @include font-regular();
+  @include font-400();
   @include font(10px, 13px);
   color: $light;
+  width: calc(100% - 24px);
 }
 
 .form-section__button {
   width: 100%;
   background-color: $light;
   color: $dark;
-  @include font-bold();
+  @include font-600();
   @include font(14px, 21px);
   padding: 10px;
   margin-top: 11px;
+  border: none;
+  cursor: pointer;
+
+  &:active,
+  &:focus {
+    outline: 2px solid #81b3d2;
+  }
 }
 
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
   .form-section {
-    background-image: url("../../img/background-3-tablet@1x.png");
+    background-image: url("../img/background-3-tablet@1x.png");
     padding-bottom: 101px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/background-3-tablet@2x.png");
+      background-image: url("../img/background-3-tablet@2x.png");
     }
   }
 
@@ -142,11 +165,11 @@
 
 @media (min-width: 0) and (max-width: $mobile-max-width) {
   .form-section {
-    background-image: url("../../img/background-3-mobile@1x.png");
+    background-image: url("../img/background-3-mobile@1x.png");
     padding-bottom: 65px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/background-3-mobile@2x.png");
+      background-image: url("../img/background-3-mobile@2x.png");
     }
   }
 

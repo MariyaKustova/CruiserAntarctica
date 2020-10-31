@@ -9,7 +9,6 @@ var autoprefixer = require('autoprefixer');
 var htmlmin = require('gulp-htmlmin');
 var server = require('browser-sync').create();
 var csso = require('gulp-csso');
-var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var imagemin = require('gulp-imagemin');
 var webp = require('gulp-webp');
@@ -92,23 +91,13 @@ gulp.task('html', function () {
       .pipe(gulp.dest('build'));
 });
 
-gulp.task('jsmin', function () {
-  return gulp
-      .src('source/js/*.js')
-      .pipe(sourcemap.init())
-      .pipe(uglify())
-      .pipe(rename({suffix: '.min'}))
-      .pipe(sourcemap.write('.'))
-      .pipe(gulp.dest('build/js'));
-});
-
 gulp.task('copy', function () {
   return gulp
       .src(
           [
             'source/fonts/**/*.{woff,woff2}',
             'source/img/**',
-            'source/js/vendor/*.js',
+            'source/js/*.js',
             'source//*.ico',
           ],
           {
@@ -122,5 +111,5 @@ gulp.task('clean', function () {
   return del('build');
 });
 
-gulp.task('build', gulp.series('clean', 'copy', 'jsmin', 'css', 'webp', 'images', 'sprite', 'html'));
+gulp.task('build', gulp.series('clean', 'copy', 'css', 'webp', 'images', 'sprite', 'html'));
 gulp.task('start', gulp.series('build', 'server'));

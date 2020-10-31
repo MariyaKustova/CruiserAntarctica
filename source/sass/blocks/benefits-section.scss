@@ -1,12 +1,13 @@
 .benefits-section {
-  background-image: url("../../img/background-2.png");
+  background-image: url("../img/background-2.png");
+  background-color: $light-blue;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   padding-bottom: 92px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../../img/backgroun-2@2x.png");
+    background-image: url("../img/backgroun-2@2x.png");
   }
 }
 
@@ -62,7 +63,7 @@
 
 .benefits-section__title-card {
   @include font(18px, 27px);
-  @include font-regular();
+  @include font-400();
   color: $dark;
   margin-top: 0;
   margin-bottom: 9px;
@@ -70,19 +71,23 @@
 
 .benefits-section__text {
   @include font(14px, 20px);
-  @include font-regular();
+  @include font-400();
   color: $dark;
   margin-top: 0;
   text-align: left;
 }
 
+.benefits-section__text--all-inclusive {
+  padding-right: 15px;
+}
+
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
   .benefits-section {
-    background-image: url("../../img/background-tablet-2.png");
+    background-image: url("../img/background-tablet-2.png");
     padding-bottom: 71px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/background-tablet-2@2x.png");
+      background-image: url("../img/background-tablet-2@2x.png");
     }
   }
 
@@ -100,9 +105,6 @@
   .benefits-section__item {
     padding: 25px 17px 6px 20px;
     width: calc((100% - 60px)/3);
-  }
-
-  .benefits-section__item {
     margin-right: 30px;
   }
 
@@ -132,18 +134,20 @@
   .benefits-section__title-card {
     @include font(18px, 25px);
     margin-bottom: 9px;
-    display: flex;
-    flex-direction: column;
+  }
+
+  .benefits-section__text--all-inclusive {
+    padding-right: 0;
   }
 }
 
 @media (min-width: 0) and (max-width: $mobile-max-width) {
   .benefits-section {
-    background-image: url("../../img/background-mobile-2.png");
+    background-image: url("../img/background-mobile-2.png");
     padding-bottom: 35px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/background-mobile-2@2x.png");
+      background-image: url("../img/background-mobile-2@2x.png");
     }
   }
 
@@ -164,8 +168,9 @@
 
   .benefits-section__item {
     width: auto;
-    padding: 25px 17px 6px 20px;
+    padding: 25px 17px 5px 20px;
     margin-right: 0;
+    margin-bottom: 29px;
   }
 
   .benefits-section__svg--boat {
@@ -191,7 +196,11 @@
   .benefits-section__title-card {
     @include font(18px, 25px);
     margin-bottom: 9px;
-    display: flex;
-    flex-direction: column;
+    box-sizing: border-box;
+    padding-right: 50px;
+  }
+
+  .benefits-section__text--all-inclusive {
+    padding-right: 0;
   }
 }
