@@ -15,14 +15,14 @@
 
 .page-footer__nav.main-menu {
   margin-left: 0;
+}
 
-  .main-menu__link-logo {
-    margin-right: 40px;
-  }
+.page-footer__link-logo {
+  margin-right: 40px;
+}
 
-  .main-menu__list-item {
-    margin-right: 34px;
-  }
+.page-footer__list-item {
+  margin-right: 34px;
 }
 
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
@@ -34,30 +34,30 @@
 
   .page-footer__nav.main-menu {
     flex-wrap: nowrap;
+  }
 
-    .main-menu__list {
-      padding-top: 0;
-    }
+  .page-footer__list{
+    padding-top: 0;
+  }
 
-    .main-menu__list-item:not(:last-child) {
-      margin-right: 24px;
-    }
+  .page-footer__list-item:not(:last-child) {
+    margin-right: 24px;
+  }
 
-    .main-menu__list-item:last-child {
-      margin-right: 0;
-    }
+  .page-footer__list-item:last-child {
+    margin-right: 0;
+  }
 
-    .main-menu__link {
-      @include font(12px, 15px);
-    }
+  .page-footer__link {
+    @include font(12px, 15px);
+  }
 
-    .main-menu__link-logo {
-      margin-right: 25px;
-    }
+  .page-footer__link-logo {
+    margin-right: 25px;
+  }
 
-    .main-menu__link-logo img {
-      @include size(38px, 20px);
-    }
+  .page-footer__link-logo img {
+    @include size(38px, 20px);
   }
 }
 
@@ -75,34 +75,33 @@
   .page-footer__nav.main-menu {
     flex-direction: column;
     flex-wrap: nowrap;
-
-    .main-menu__list {
-      flex-direction: column;
-      padding-top: 0;
-      margin-bottom: 26px;
-    }
-
-    .main-menu__list-item:not(:last-child) {
-      margin-right: 24px;
-      margin-bottom: 14px;
-    }
-
-    .main-menu__list-item:last-child {
-      margin-right: 0;
-    }
-
-    .main-menu__link {
-      @include font(12px, 15px);
-    }
-
-    .main-menu__link-logo {
-      margin-right: 25px;
-      margin-bottom: 23px;
-    }
-
-    .main-menu__link-logo img {
-      @include size(38px, 20px);
-    }
   }
 
+  .page-footer__list {
+    flex-direction: column;
+    padding-top: 0;
+    margin-bottom: 26px;
+  }
+
+  .page-footer__list-item:not(:last-child) {
+    margin-right: 24px;
+    margin-bottom: 14px;
+  }
+
+  .page-footer__list-item:last-child {
+    margin-right: 0;
+  }
+
+  .page-footer__link {
+    @include font(12px, 15px);
+  }
+
+  .page-footer__link-logo {
+    margin-right: 25px;
+    margin-bottom: 23px;
+  }
+
+  .page-footer__link-logo img {
+    @include size(38px, 20px);
+  }
 }
