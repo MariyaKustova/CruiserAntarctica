@@ -1,9 +1,9 @@
 .page-header {
   background-image: url("../img/background-1.png");
   background-color: $light-blue;
-  background-position: center top;
+  background-position: center bottom;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   min-height: 650px;
   margin-bottom: 120px;
 
@@ -25,7 +25,7 @@
   margin-right: 50px;
 }
 
-.page-header__link-logo--dark {
+.page-header__img--dark {
   display: none;
 }
 
@@ -82,7 +82,7 @@
     @include size(38px, 20px);
   }
 
-  .page-header__link-logo--dark {
+  .page-header__img--dark {
     display: none;
   }
 }
@@ -123,16 +123,16 @@
     margin-left: 2px;
   }
 
-  .page-header__link-logo--dark {
+  .page-header__img--dark {
     display: none;
   }
 
   .no-js {
-    .page-header__link-logo {
+    .page-header__img {
       display: none;
     }
 
-    .page-header__link-logo--dark {
+    .page-header__img--dark {
       display: block;
       @include size(42px, 22px);
       padding-left: 15px;
@@ -160,7 +160,7 @@
       background-color: $light;
     }
 
-    .page-header__link-logo {
+    .page-header__img-logo {
       display: none;
     }
 

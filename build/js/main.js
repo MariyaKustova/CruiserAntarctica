@@ -15,3 +15,6 @@ window.addEventListener('keydown', function (evt) {
     menu.classList.remove('page-header--opened');
   }
 });
+
+// Picture element HTML5 shiv
+document.createElement('picture');

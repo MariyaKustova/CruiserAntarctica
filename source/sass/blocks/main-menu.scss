@@ -56,51 +56,49 @@
 }
 
 @media (min-width: 0) and (max-width: $mobile-max-width) {
-  .page-header {
-    .main-menu__svg--open {
-      stroke: $light;
-      width: 30px;
-      height: 14px;
-      position: relative;
-      top: 3px;
-      right: 0px;
+  .main-menu__svg--open {
+    stroke: $light;
+    width: 30px;
+    height: 14px;
+    position: relative;
+    top: 3px;
+    right: 0px;
+  }
+
+  .main-menu__svg--close {
+    display: none;
+  }
+
+  .main-menu__button {
+    display: block;
+    margin-left: auto;
+    padding: 0;
+    position: relative;
+    left: 3px;
+
+    &:hover .main-menu__svg--open {
+      stroke: $light-hover;
     }
 
-    .main-menu__svg--close {
-      display: none;
+    &:focus .main-menu__svg--open {
+      stroke: $light-active;
+    }
+  }
+
+  .main-menu__wrapper {
+    background-color: transparent;
+    display: none;
+  }
+
+  .main-menu__link {
+    @include font(18px, 22px);
+
+    &:hover {
+      color: $dark-hover;
     }
 
-    .main-menu__button {
-      display: block;
-      margin-left: auto;
-      padding: 0;
-      position: relative;
-      left: 3px;
-
-      &:hover .main-menu__svg--open {
-        stroke: $light-hover;
-      }
-
-      &:focus .main-menu__svg--open {
-        stroke: $light-active;
-      }
-    }
-
-    .main-menu__wrapper {
-      background-color: transparent;
-      display: none;
-    }
-
-    .main-menu__link {
-      @include font(18px, 22px);
-
-      &:hover {
-        color: $dark-hover;
-      }
-
-      &:focus {
-        color: $dark-active;
-      }
+    &:focus {
+      color: $dark-active;
     }
   }
 

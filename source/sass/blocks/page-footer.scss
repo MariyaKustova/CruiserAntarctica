@@ -13,7 +13,7 @@
   display: flex;
 }
 
-.page-footer__nav.main-menu {
+.page-footer__nav {
   margin-left: 0;
 }
 
@@ -32,7 +32,7 @@
     display: flex;
   }
 
-  .page-footer__nav.main-menu {
+  .page-footer__nav {
     flex-wrap: nowrap;
   }
 
@@ -72,7 +72,7 @@
     flex-direction: column;
   }
 
-  .page-footer__nav.main-menu {
+  .page-footer__nav {
     flex-direction: column;
     flex-wrap: nowrap;
   }

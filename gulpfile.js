@@ -6,7 +6,6 @@ var sourcemap = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
-var htmlmin = require('gulp-htmlmin');
 var server = require('browser-sync').create();
 var csso = require('gulp-csso');
 var rename = require('gulp-rename');
@@ -87,7 +86,6 @@ gulp.task('html', function () {
   return gulp
       .src('source/*.html')
       .pipe(posthtml([include()]))
-      .pipe(htmlmin({collapseWhitespace: true}))
       .pipe(gulp.dest('build'));
 });
 
