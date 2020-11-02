@@ -21,8 +21,14 @@
 
 .page-header__link-logo {
   display: block;
+
   @include size(70px, 38px);
   margin-right: 50px;
+
+  &:active,
+  &:focus {
+    outline: 2px solid #81b3d2;
+  }
 }
 
 .page-header__img--dark {
@@ -31,9 +37,10 @@
 
 .page-header__heading {
   @include font(54px, 66px);
-  @include font-700();
+  font-weight: 700;
   color: $light;
   margin-top: 0;
+
   @include alignment-desktop();
   padding-left: 199px;
   margin-bottom: 12px;
@@ -41,9 +48,10 @@
 
 .page-header__text {
   @include font(20px, 25px);
-  @include font-400();
+  font-weight: 400;
   color: $light;
   margin-top: 0;
+
   @include alignment-desktop();
   padding-left: 198px;
   padding-bottom: 50px;
@@ -79,6 +87,7 @@
 
   .page-header__link-logo {
     display: block;
+
     @include size(38px, 20px);
   }
 
@@ -119,6 +128,7 @@
 
   .page-header__link-logo {
     display: block;
+
     @include size(38px, 20px);
     margin-left: 2px;
   }
@@ -127,45 +137,81 @@
     display: none;
   }
 
-  .no-js {
+  .page-header--opened {
+    .page-header__wrapper-alignment {
+      background-color: $light;
+      flex-direction: column;
+    }
+
     .page-header__img {
       display: none;
     }
 
     .page-header__img--dark {
       display: block;
-      @include size(42px, 22px);
-      padding-left: 15px;
-      padding-right: 15px;
-      margin-left: 0px;
     }
 
-    .page-header {
-      min-height: 500px;
+    .page-header__button {
+      top: -39px;
+      right: 8px;
+      height: 20px;
+
+      &:hover .page-header__svg-close {
+        stroke: $dark-hover;
+      }
+
+      &:focus .page-header__svg-close {
+        stroke: $dark-active;
+      }
     }
 
-    .page-header__wrapper-alignment {
-      min-width: $mobile-min-width;
-      max-width: 100%;
-      padding-left: 0;
-      padding-right: 0;
-      margin-bottom: 70px;
-      background-color: $light;
-      flex-direction: column;
-    }
-  }
-
-  .page-header--opened {
-    .page-header__wrapper-alignment {
-      background-color: $light;
-    }
-
-    .page-header__img-logo {
+    .page-header__svg-open {
       display: none;
     }
 
-    .page-header__link-logo--dark {
+    .page-header__svg-close {
       display: block;
+    }
+
+    .page-header__wrapper {
+      display: block;
+      width: 100%;
+    }
+
+    .page-header__nav {
+      width: 100%;
+      margin-left: 0;
+
+      @include alignment-mobile();
+      min-height: 259px;
+      box-sizing: border-box;
+      background-color: $light;
+      padding-top: 20px;
+      position: absolute;
+      top: 40px;
+      left: 0;
+    }
+
+    .page-header__list {
+      flex-direction: column;
+      position: relative;
+      top: -31px;
+    }
+
+    .page-header__list-item:not(:last-child) {
+      margin-bottom: 21px;
+    }
+
+    .page-header__link {
+      color: $dark;
+
+      &:hover {
+        color: $dark-hover;
+      }
+
+      &:focus {
+        color: $dark-active;
+      }
     }
   }
 }

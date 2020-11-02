@@ -46,7 +46,7 @@
 
 .cruises-section__title-description {
   @include font(18px, 27px);
-  @include font-400();
+  font-weight: 400;
   color: $light;
   margin-top: 0;
   margin-bottom: 13px;
@@ -58,7 +58,7 @@
 
 .cruises-section__subheading {
   @include font(14px, 20px);
-  @include font-500();
+  font-weight: 500;
   color: $light;
   margin-top: 0;
   margin-bottom: 2px;
@@ -66,15 +66,16 @@
 
 .cruises-section__text {
   @include font(14px, 20px);
-  @include font-400();
+  font-weight: 400;
   color: $light;
   margin-bottom: 10px;
+  margin-top: 0;
 }
 
 .cruises-section__link {
   @include link-reset($dark);
   @include font(14px, 21px);
-  @include font-600();
+  font-weight: 600;
   display: block;
   background: $light;
   text-align: center;
@@ -87,24 +88,22 @@
 
   &:active {
     color: $dark-active;
+    outline: 2px solid #81b3d2;
+  }
+
+  &:focus {
+    outline: 2px solid #81b3d2;
   }
 }
 
 .cruises-section__title-card {
   @include font(18px, 27px);
-  @include font-400();
+  font-weight: 400;
   color: $light;
   margin-top: 0;
   position: absolute;
   bottom: 8px;
   left: 31px;
-}
-
-.cruises-section__text {
-  @include font(14px, 20px);
-  @include font-400();
-  color: $light;
-  margin-top: 0;
 }
 
 .cruises-section__img {
@@ -173,6 +172,4 @@
   .cruises-section__wrapper-description {
     padding: 29px 26px 34px;
   }
-
-
 }

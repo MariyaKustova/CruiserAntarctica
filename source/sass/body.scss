@@ -1,5 +1,5 @@
 body {
-  font-family: "Monserrat", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   color: $dark;
   position: relative;
   background-color: $light;
@@ -10,10 +10,6 @@ img {
   height: auto;
 }
 
-a:active,
-a:focus {
-  outline: 2px solid #81b3d2;
-}
 
 input {
   cursor: pointer;

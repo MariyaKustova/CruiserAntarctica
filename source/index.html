@@ -14,34 +14,35 @@
 </head>
 
 <body class="no-js">
-  <header class="page-header">
-    <div class="page-header__wrapper-alignment">
-      <a class="page-header__link-logo" href="#">
-        <img class="page-header__img" src="./img/logo.svg" width="70" height="38" alt="Логотип">
-        <img class="page-header__img page-header__img--dark" src="./img/logo-dark.svg" width="42" height="22" alt="Логотип">
+  <header class="page-header no-js__header">
+    <div class="page-header__wrapper-alignment no-js__wrapper-alignment">
+      <a class="page-header__link-logo no-js__link-logo" href="#">
+        <img class="page-header__img no-js__img" src="./img/logo.svg" width="70" height="38" alt="Логотип">
+        <img class="page-header__img page-header__img--dark no-js__img-dark" src="./img/logo-dark.svg" width="42"
+          height="22" alt="Логотип">
       </a>
-      <nav class="page-header__nav main-menu">
-        <button class="main-menu__button" type="button">
-          <svg class="main-menu__svg main-menu__svg--open" width="24px" height="12px">
+      <nav class="page-header__nav main-menu no-js__nav">
+        <button class="main-menu__button page-header__button no-js__button" type="button">
+          <svg class="main-menu__svg main-menu__svg--open page-header__svg-open" width="24px" height="12px">
             <use xlink:href="./img/sprite.svg#icon-open"></use>
           </svg>
-          <svg class="main-menu__svg main-menu__svg--close" width="13px" height="13px">
+          <svg class="main-menu__svg main-menu__svg--close page-header__svg-close" width="13px" height="13px">
             <use xlink:href="./img/sprite.svg#icon-close"></use>
           </svg>
         </button>
-        <div class="main-menu__wrapper">
-          <ul class="main-menu__list">
-            <li class="main-menu__list-item">
-              <a class="main-menu__link" href="#benefits">Преимущества</a>
+        <div class="main-menu__wrapper page-header__wrapper no-js__wrapper">
+          <ul class="main-menu__list page-header__list no-js__list">
+            <li class="main-menu__list-item page-header__list-item no-js__list-item">
+              <a class="no-js__link main-menu__link page-header__link" href="#benefits">Преимущества</a>
             </li>
-            <li class="main-menu__list-item">
-              <a class="main-menu__link" href="#">Направления</a>
+            <li class="main-menu__list-item page-header__list-item no-js__list-item">
+              <a class="no-js__link main-menu__link page-header__link" href="#">Направления</a>
             </li>
-            <li class="main-menu__list-item">
-              <a class="main-menu__link" href="#cruises">Ближайшие круизы</a>
+            <li class="main-menu__list-item page-header__list-item no-js__list-item">
+              <a class="no-js__link main-menu__link page-header__link" href="#cruises">Ближайшие круизы</a>
             </li>
-            <li class="main-menu__list-item">
-              <a class="main-menu__link" href="#contacts">Контакты</a>
+            <li class="main-menu__list-item page-header__list-item no-js__list-item">
+              <a class="no-js__link main-menu__link page-header__link" href="#contacts">Контакты</a>
             </li>
           </ul>
         </div>
@@ -75,6 +76,8 @@
               ./img/webp/rectangle-mobile@1x.webp 1x,
               ./img/webp/rectangle-mobile@1x.webp 2x
             " />
+          <!-- Размер без ретины - 560 * 301
+          Размер с ретиной - 1120 * 602 -->
           <img class="journey-section__img" src="./img/rectangle-desktop@1x.png"
             srcset="./img/rectangle-desktop@2x.png 2x" loading="lazy" alt="Фотография  пингвинов" />
         </picture>
@@ -134,6 +137,8 @@
                     ./img/webp/astoria-mobile@1x.webp 1x,
                     ./img/webp/astoria-mobile@2x.webp 2x
                   " />
+                <!-- Размер без ретины - 260 * 386
+          Размер с ретиной - 520 * 772 -->
                 <img class="cruises-section__img" src="./img/astoria-desktop@1x.png"
                   srcset="./img/astoria-desktop@2x.png 2x" loading="lazy" alt="Круиз “Астория”" />
               </picture>
@@ -181,6 +186,8 @@
                     ./img/webp/astoria-mobile@1x.webp 1x,
                     ./img/webp/astoria-mobile@2x.webp 2x
                   " />
+                <!-- Размер без ретины - 260 * 386
+          Размер с ретиной - 520 * 772 -->
                 <img class="cruises-section__img" src="./img/astoria-desktop@1x.png"
                   srcset="./img/astoria-desktop@2x.png 2x" loading="lazy" alt="Круиз “Элайн”" />
               </picture>
@@ -228,6 +235,8 @@
                     ./img/webp/atlantis-mobile@1x.webp 1x,
                     ./img/webp/atlantis-mobile@2x.webp 2x
                   " />
+                <!-- Размер без ретины - 260 * 386
+          Размер с ретиной - 520 * 772 -->
                 <img class="cruises-section__img" src="./img/atlantis-desktop@1x.png"
                   srcset="./img/atlantis-desktop@2x.png 2x" loading="lazy" alt="Круиз “Атлантис”" />
               </picture>
@@ -275,6 +284,8 @@
                     ./img/webp/odissea-mobile@1x.webp 1x,
                     ./img/webp/odissea-mobile@2x.webp 2x
                   " />
+                <!-- Размер без ретины - 260 * 386
+          Размер с ретиной - 520 * 772 -->
                 <img class="cruises-section__img" src="./img/odissea-desktop@1x.png"
                   srcset="./img/odissea-desktop@2x.png 2x" loading="lazy" alt="Круиз “Одиссей”" />
               </picture>
@@ -322,6 +333,8 @@
                     ./img/webp/olympia-mobile@1x.webp 1x,
                     ./img/webp/olympia-mobile@2x.webp 2x
                   " />
+                <!-- Размер без ретины - 260 * 386
+          Размер с ретиной - 520 * 772 -->
                 <img class="cruises-section__img" src="./img/olympia-desktop@1x.png"
                   srcset="./img/olympia-desktop@2x.png 2x" loading="lazy" alt="Круиз “Олимпия”" />
               </picture>
@@ -369,6 +382,8 @@
                     ./img/webp/avrora-mobile@1x.webp 1x,
                     ./img/webp/avrora-mobile@2x.webp 2x
                   " />
+                <!-- Размер без ретины - 260 * 386
+          Размер с ретиной - 520 * 772 -->
                 <img class="cruises-section__img" src="./img/avrora-desktop@1x.png"
                   srcset="./img/avrora-desktop@2x.png 2x" loading="lazy" alt="Круиз “Аврора”" />
               </picture>
@@ -416,6 +431,8 @@
                     ./img/webp/leonor-mobile@1x.webp 1x,
                     ./img/webp/leonor-mobile@2x.webp 2x
                   " />
+                <!-- Размер без ретины - 260 * 386
+          Размер с ретиной - 520 * 772 -->
                 <img class="cruises-section__img" src="./img/leonor-desktop@1x.png"
                   srcset="./img/leonor-desktop@2x.png 2x" loading="lazy" alt="Круиз “Леонор”" />
               </picture>
@@ -463,6 +480,8 @@
                     ./img/webp/minion-mobile@1x.webp 1x,
                     ./img/webp/minion-mobile@2x.webp 2x
                   " />
+                <!-- Размер без ретины - 260 * 386
+          Размер с ретиной - 520 * 772 -->
                 <img class="cruises-section__img" src="./img/minion-desktop@1x.png"
                   srcset="./img/minion-desktop@2x.png 2x" loading="lazy" alt="Круиз “Минион-1”" />
               </picture>
@@ -563,7 +582,7 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <nav class="page-footer__nav main-menu">
-        <a class="main-menu__link-logo page-footer__link-logo" href="#">
+        <a class="page-footer__link-logo" href="#">
           <img src="./img/logo.svg" width="42" height="22" alt="Логотип">
         </a>
         <ul class="main-menu__list page-footer__list">
@@ -607,7 +626,7 @@
     </div>
   </footer>
 
-  <script src="./js/main.js"></script>
+  <!-- <script src="./js/main.js"></script> -->
   <script src="./js/vendor.min.js" async></script>
 </body>
 

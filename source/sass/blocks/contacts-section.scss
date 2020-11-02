@@ -26,7 +26,8 @@
 }
 
 .contacts-section__text {
-  @include font-500();
+  font-weight: 500;
+
   @include font(18px, 27px);
   color: $dark;
   margin-bottom: 32px;
@@ -34,7 +35,8 @@
 
 .contacts-section__address {
   width: calc(100% - 18px - 8px);
-  @include font-400();
+  font-weight: 400;
+
   @include font(16px, 24px);
   color: $dark;
   margin-top: 0;
@@ -42,10 +44,16 @@
 
 .contacts-section__link {
   @include link-reset($dark);
-  @include font-400();
+  font-weight: 400;
+
   @include font(16px, 24px);
   display: flex;
   align-items: center;
+
+  &:active,
+  &:focus {
+    outline: 2px solid #81b3d2;
+  }
 }
 
 .contacts-section__svg {
@@ -55,6 +63,7 @@
 .contacts-section__svg--pointer {
   @include size(18px, 22px);
 }
+
 .contacts-section__svg--tel {
   @include size(18px, 18px);
 }

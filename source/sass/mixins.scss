@@ -19,29 +19,9 @@
   height: $height;
 }
 
-@mixin font-400() {
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-weight: 400;
-}
-
-@mixin font-500() {
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-weight: 500;
-}
-
-@mixin font-600() {
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-weight: 600;
-}
-
-@mixin font-700() {
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-weight: 700;
-}
-
 @mixin title() {
   @include font(28px, 42px);
-  @include font-600();
+  font-weight: 600;
   color: $dark;
   margin-top: 0;
 }
@@ -56,7 +36,7 @@
 
 @mixin title-form() {
   @include font(40px, 60px);
-  @include font-700();
+  font-weight: 700;
   color: $dark;
   margin-top: 0;
 }

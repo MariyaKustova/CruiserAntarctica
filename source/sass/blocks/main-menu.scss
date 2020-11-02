@@ -29,8 +29,9 @@
 
 .main-menu__link {
   @include font(16px, 20px);
-  @include font-500;
   @include link-reset($light);
+
+  font-weight: 500;
 
   &:hover {
     color: $light-hover;
@@ -38,6 +39,11 @@
 
   &:focus {
     color: $light-active;
+    outline: 2px solid #81b3d2;
+  }
+
+  &:active {
+    outline: 2px solid #81b3d2;
   }
 }
 
@@ -62,7 +68,7 @@
     height: 14px;
     position: relative;
     top: 3px;
-    right: 0px;
+    right: 0;
   }
 
   .main-menu__svg--close {
@@ -99,110 +105,6 @@
 
     &:focus {
       color: $dark-active;
-    }
-  }
-
-  .page-header.page-header--opened {
-    .main-menu__button {
-      top: -39px;
-      right: 8px;
-      height: 20px;
-
-      &:hover .main-menu__svg--close {
-        stroke: $dark-hover;
-      }
-
-      &:focus .main-menu__svg--close {
-        stroke: $dark-active;
-      }
-    }
-
-    .main-menu__svg--open {
-      display: none;
-    }
-
-    .main-menu__svg--close {
-      display: block;
-    }
-
-    .main-menu__wrapper {
-      display: block;
-      width: 100%;
-    }
-
-    .main-menu {
-      width: 100%;
-      margin-left: 0;
-      @include alignment-mobile();
-      min-height: 259px;
-      box-sizing: border-box;
-      background-color: $light;
-      padding-top: 20px;
-      position: absolute;
-      top: 40px;
-      left: 0;
-    }
-
-    .main-menu__list {
-      flex-direction: column;
-    }
-
-    .main-menu__list-item:not(:last-child) {
-      margin-bottom: 21px;
-    }
-
-    .main-menu__link {
-      color: $dark;
-
-      &:hover {
-        color: $dark-hover;
-      }
-
-      &:focus {
-        color: $dark-active;
-      }
-    }
-  }
-
-  .no-js {
-    .page-header {
-      .main-menu {
-        width: auto;
-        margin-left: 0;
-        @include alignment-mobile();
-        min-height: 257px;
-        box-sizing: border-box;
-        background-color: $light;
-        padding-top: 36px;
-      }
-
-      .main-menu__wrapper {
-        display: block;
-      }
-
-      .main-menu__button {
-        display: none;
-      }
-
-      .main-menu__list {
-        flex-direction: column;
-      }
-
-      .main-menu__list-item {
-        margin-bottom: 21px;
-      }
-
-      .main-menu__link {
-        color: $dark;
-
-        &:hover {
-          color: $dark-hover;
-        }
-
-        &:focus {
-          color: $dark-active;
-        }
-      }
     }
   }
 }
