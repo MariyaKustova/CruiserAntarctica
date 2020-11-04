@@ -16,7 +16,6 @@
 
 .journey-section__text {
   @include font(16px, 24px);
-  letter-spacing: 1.1px;
 }
 
 .journey-section__wrapper-img {
@@ -40,8 +39,8 @@
     padding-right: 20px;
   }
 
-  .journey-section__text {
-    letter-spacing: 1px;
+  .journey-section__img {
+    @include size (324px, 264px);
   }
 }
 

@@ -19,7 +19,7 @@
 
 .cruises-section__item {
   margin-right: 30px;
-  margin-bottom: 26px;
+  margin-bottom: 30px;
   width: calc((100% - 90px) / 4);
   position: relative;
 
@@ -102,8 +102,8 @@
   color: $light;
   margin-top: 0;
   position: absolute;
-  bottom: 8px;
-  left: 31px;
+  bottom: 4px;
+  left: 32px;
 }
 
 .cruises-section__img {
@@ -131,7 +131,7 @@
   }
 
   .cruises-section__title-card {
-    bottom: 13px;
+    bottom: 9px;
     left: 36px;
   }
 
@@ -165,7 +165,7 @@
   }
 
   .cruises-section__title-card {
-    bottom: 3px;
+    bottom: -1px;
     left: 26px;
   }
 

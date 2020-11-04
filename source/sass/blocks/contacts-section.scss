@@ -1,6 +1,6 @@
 .contacts-section {
   @include alignment-desktop();
-  padding: 120px 110px 120px 105px;
+  padding: 120px 110px 119px 105px;
   display: flex;
 }
 
@@ -71,7 +71,7 @@
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
   .contacts-section {
     @include alignment-tablet();
-    padding: 100px 55px 100px 45px;
+    padding: 100px 55px 91px 45px;
   }
 
   .contacts-section__map {
@@ -88,6 +88,10 @@
     margin-bottom: 27px;
   }
 
+  .contacts-section__list {
+    padding-right: 25px;
+  }
+
   .contacts-section__svg {
     margin-right: 10px;
   }
@@ -95,8 +99,10 @@
   .contacts-section__svg--pointer {
     width: 26px;
     height: 22px;
+    margin-right: 3px;
     position: relative;
     top: 5px;
+    left: -4px;
   }
 }
 
