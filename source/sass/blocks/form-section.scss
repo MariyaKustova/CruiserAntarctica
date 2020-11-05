@@ -74,6 +74,13 @@
     }
   }
 
+  input[type="checkbox"] {
+    @include size (0, 0);
+    margin: 0;
+    padding: 0;
+    outline: none;
+  }
+
   input[type="checkbox"] + span {
     display: block;
 
