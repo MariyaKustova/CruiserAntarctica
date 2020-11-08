@@ -1,14 +1,13 @@
 .social-contacts {
   display: flex;
+  flex-wrap: wrap;
   margin-left: auto;
-  margin-top: 11px;
+  padding-left: 0;
+  list-style: none;
+  min-width: 117px;
 }
 
-.social-contacts__list {
-  @include list-reset();
-}
-
-.social-contacts__item {
+.social-contacts__item:not(:first-child) {
   margin-left: 33px;
 }
 
@@ -28,11 +27,11 @@
 
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
   .social-contacts {
-    margin-top: 2px;
     margin-left: auto;
+    min-width: 87px;
   }
 
-  .social-contacts__item {
+  .social-contacts__item:not(:first-child) {
     margin-left: 23px;
   }
 
@@ -59,7 +58,10 @@
 
   .social-contacts__item {
     margin-left: 0;
-    margin-right: 23px;
+  }
+
+  .social-contacts__item:not(:first-child) {
+    margin-left: 23px;
   }
 
   .social-contacts__link--facebook svg {

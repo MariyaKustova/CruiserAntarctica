@@ -1,6 +1,6 @@
 .form-section {
   background-image: url("../img/background-3.png");
-  background-color: $light-blue;
+  background-color: $dark-active;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,6 +19,7 @@
 .form-section__wrapper-text {
   width: 50%;
   padding-top: 130px;
+  margin-right: 20px;
 }
 
 .form-section__title {
@@ -54,6 +55,10 @@
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   input {
@@ -67,6 +72,7 @@
     @include font(14px, 21px);
     padding: 12px 16px 10px;
     border: none;
+    border-radius: 0;
 
     &:active,
     &:focus {
@@ -75,17 +81,16 @@
   }
 
   input[type="checkbox"] {
-    @include size (0, 0);
+    @include size(0, 0);
     margin: 0;
-    padding: 0;
-    outline: none;
   }
 
   input[type="checkbox"] + span {
     display: block;
+    cursor: pointer;
 
     @include size (18px, 18px);
-    margin-right: 6px;
+    margin-right: 5px;
     background-color: $light;
   }
 
@@ -148,7 +153,7 @@
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
   .form-section {
     background-image: url("../img/background-3-tablet@1x.png");
-    padding-bottom: 101px;
+    padding-bottom: 100px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/background-3-tablet@2x.png");
@@ -232,7 +237,7 @@
     }
 
     label:last-of-type {
-      margin-top: -12px;
+      margin-top: -2px;
     }
 
     input[type="checkbox"] + span {

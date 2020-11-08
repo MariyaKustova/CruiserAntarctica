@@ -1,6 +1,6 @@
 .page-header {
   background-image: url("../img/background-1.png");
-  background-color: $light-blue;
+  background-color: $dark-active;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -171,6 +171,8 @@
 
     .page-header__svg-close {
       display: block;
+      position: relative;
+      top: -15px;
     }
 
     .page-header__wrapper {
@@ -200,6 +202,11 @@
 
     .page-header__list-item:not(:last-child) {
       margin-bottom: 21px;
+      margin-left: 0;
+    }
+
+    .page-header__list-item:last-child {
+      margin-left: 0;
     }
 
     .page-header__link {

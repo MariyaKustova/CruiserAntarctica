@@ -6,6 +6,7 @@
 
 .journey-section__wrapper-text {
   width: calc(50% - 65px);
+  margin-right: 20px;
 }
 
 .journey-section__title {
@@ -20,6 +21,8 @@
 
 .journey-section__wrapper-img {
   margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
@@ -37,6 +40,10 @@
     margin-top: -9px;
     margin-bottom: 15px;
     padding-right: 20px;
+  }
+
+  .journey-section__wrapper-img {
+    align-items: flex-start;
   }
 
   .journey-section__img {
@@ -59,6 +66,7 @@
     @include title-mobile();
     margin-top: 0;
     margin-bottom: 15px;
+    padding-right: 20px;
   }
 
   .journey-section__text {
@@ -67,5 +75,6 @@
 
   .journey-section__wrapper-img {
     margin-left: 0;
+    display: block;
   }
 }
