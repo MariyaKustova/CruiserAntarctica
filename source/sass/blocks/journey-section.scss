@@ -27,7 +27,8 @@
 
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
   .journey-section {
-    @include alignment-tablet();
+    padding-left: 45px;
+    padding-right: 45px;
     margin-bottom: 77px;
   }
 

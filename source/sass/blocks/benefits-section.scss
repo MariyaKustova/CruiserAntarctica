@@ -88,7 +88,8 @@
   }
 
   .benefits-section__wrapper {
-    @include alignment-tablet();
+    padding-left: 45px;
+    padding-right: 45px;
     padding-top: 90px;
   }
 

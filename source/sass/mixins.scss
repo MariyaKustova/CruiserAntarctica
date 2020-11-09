@@ -49,13 +49,6 @@
   padding-right: 103px;
 }
 
-@mixin alignment-tablet() {
-  max-width: auto;
-  min-width: 768px;
-  padding-left: 45px;
-  padding-right: 45px;
-}
-
 @mixin alignment-mobile() {
   min-width: 320px;
   padding-left: 15px;

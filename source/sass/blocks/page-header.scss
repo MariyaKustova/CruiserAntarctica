@@ -69,19 +69,23 @@
   }
 
   .page-header__wrapper-alignment {
-    @include alignment-tablet();
+    padding-left: 45px;
+    padding-right: 45px;
     padding-top: 29px;
-    margin-bottom: 219px;
+    margin-bottom: 217px;
   }
 
   .page-header__heading {
     @include font(50px, 61px);
-    @include alignment-tablet();
+    padding-left: 45px;
+    padding-right: 45px;
     margin-bottom: 12px;
   }
 
   .page-header__text {
-    @include alignment-tablet();
+    padding-left: 45px;
+    padding-right: 45px;
+
     @include font(18px, 22px);
   }
 

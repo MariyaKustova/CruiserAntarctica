@@ -7,7 +7,7 @@
   min-width: 117px;
 }
 
-.social-contacts__item:not(:first-child) {
+.social-contacts__item {
   margin-left: 33px;
 }
 
@@ -31,7 +31,7 @@
     min-width: 87px;
   }
 
-  .social-contacts__item:not(:first-child) {
+  .social-contacts__item {
     margin-left: 23px;
   }
 
@@ -57,11 +57,11 @@
   }
 
   .social-contacts__item {
-    margin-left: 0;
+    margin-left: 23px;
   }
 
-  .social-contacts__item:not(:first-child) {
-    margin-left: 23px;
+  .social-contacts__item:first-child {
+    margin-left: 0;
   }
 
   .social-contacts__link--facebook svg {
