@@ -4,14 +4,17 @@
   margin-left: auto;
   padding-left: 0;
   list-style: none;
-  min-width: 117px;
+  min-width: 150px;
 }
 
 .social-contacts__item {
   margin-left: 33px;
+  margin-bottom: 10px;
 }
 
 .social-contacts__svg {
+  position: relative;
+  top: 8px;
   fill: $light;
 }
 
@@ -28,7 +31,7 @@
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
   .social-contacts {
     margin-left: auto;
-    min-width: 87px;
+    min-width: 110px;
   }
 
   .social-contacts__item {
@@ -50,6 +53,7 @@
 
 @media (min-width: 0) and (max-width: $mobile-max-width) {
   .social-contacts {
+    min-width: 110px;
     margin-top: 2px;
     margin-left: 0;
 
@@ -57,7 +61,8 @@
   }
 
   .social-contacts__item {
-    margin-left: 23px;
+    margin-left: 0;
+    margin-right: 23px;
   }
 
   .social-contacts__item:first-child {

@@ -35,6 +35,10 @@
   display: none;
 }
 
+.page-header__nav {
+  max-width: calc(100% - 120px);
+}
+
 .page-header__heading {
   @include font(54px, 66px);
   font-weight: 700;
@@ -97,6 +101,10 @@
 
   .page-header__img--dark {
     display: none;
+  }
+
+  .page-header__nav {
+    max-width: calc(100% - 88px);
   }
 }
 
@@ -185,6 +193,7 @@
     }
 
     .page-header__nav {
+      max-width: 100%;
       width: 100%;
       margin-left: 0;
 
